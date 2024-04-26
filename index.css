@@ -1,0 +1,730 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --pri: #8e6bb5;
+  --sec: #367588;
+  --text: #fff;
+  --text2: #333;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/web1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.heading {
+  color: var(--sec);
+  font-size: 2.5rem;
+  display: inline-block;
+  padding-top: 6rem;
+  margin: 4rem;
+  position: relative;
+}
+
+.heading::before,
+.heading::after {
+  content: "";
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-top: 0.4rem solid var(--sec);
+  border-left: 0.4rem solid var(--sec);
+}
+
+.heading::before {
+  top: 5.8rem;
+  left: -2rem;
+}
+.heading::after {
+  bottom: -0.5rem;
+  right: -2rem;
+  transform: rotate(180deg);
+}
+.btn {
+  padding: 0.5rem 2rem;
+  background-color: var(--sec);
+  color: var(--text);
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background-color: var(--pri);
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  position: fixed;
+  color: #fff;
+  background: transparent;
+  z-index: 2;
+}
+
+.navbar .logo {
+  text-transform: capitalize;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.navbar ul li a:hover {
+  transition: 0.4s ease;
+  color: var(--sec);
+  background: var(--text);
+  padding: 3.1rem 1rem;
+}
+
+#check {
+  display: none;
+}
+label {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+label:hover {
+  font-size: 2rem;
+  top: 37%;
+  transition: 0.2s ease;
+}
+
+#check {
+  z-index: 3;
+}
+
+.home {
+  padding: 11rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  order: 2;
+}
+.image img {
+  width: 45vw;
+  height: 60vh;
+  flex: 1 1 40rem;
+  margin-right: 3rem;
+}
+.content {
+  margin: 100px 5%;
+  flex: 1 1 20rem;
+  order: 1;
+}
+
+.content .article {
+  max-width: 500px;
+}
+
+.content .article h1 {
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: 2.5px;
+}
+
+.content .article p {
+  color: var(--text);
+  margin: 30px 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content .article a {
+  font-size: 20px;
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--sec);
+  padding: 10px 40px;
+}
+
+.content .article a:hover {
+  transition: 0.4s ease;
+  background-color: var(--pri);
+}
+
+.social {
+  padding: 25px 0;
+}
+.social a {
+  padding: 0 7px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.social a:hover {
+  transition: 0.4s ease;
+  font-size: 1.8rem;
+}
+
+.about {
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+}
+
+.about .row .content {
+  text-align: left;
+}
+
+.about .row .image img {
+  width: 40vw;
+}
+
+.about .row .content h3 {
+  font-size: 2rem;
+  color: var(--sec);
+  margin-bottom: 1rem;
+}
+.about .row .content p {
+  font-size: 1.1rem;
+  color: var(--text2);
+  margin-bottom: 1rem;
+}
+
+.service {
+  width: 100vw;
+  text-align: center;
+}
+
+.service .row {
+  margin: 2rem 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.service .row.two {
+  flex-direction: row;
+}
+
+.service .row.two .content {
+  text-align: left;
+}
+
+.service .row .image img {
+  width: 50vw;
+  height: 55vh;
+}
+
+.service .row .content {
+  text-align: right;
+  padding: 0 2rem;
+}
+
+.service .row .content h3 {
+  font-size: 3rem;
+  color: var(--sec);
+  margin-bottom: 1rem;
+}
+
+.service .row .content p {
+  font-size: 1.1rem;
+  color: var(--text2);
+  margin-bottom: 1.5rem;
+}
+
+.team {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--text2);
+  text-align: center;
+}
+
+.team .heading {
+  color: var(--text);
+}
+.team .heading::before,
+.team .heading::after {
+  border-top: 0.4rem solid var(--text);
+  border-left: 0.4rem solid var(--text);
+  z-index: 0;
+}
+
+.team .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team .row .card {
+  height: 35rem;
+  width: 25rem;
+  background: var(--text);
+  text-align: center;
+  margin: 7rem 2rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-reflect: below 0.2rem linear-gradient(transparent 70%, #0004);
+}
+
+.team .row .card .image {
+  margin: 1rem 0;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.team .row .card .image img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  border: 0.5rem solid var(--text);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.team .row .card .info h3 {
+  font-size: 2rem;
+  color: var(--text2);
+}
+
+.team .row .card .info span {
+  font-size: 1.8rem;
+  color: var(--sec);
+}
+
+.team .row .card .info .icons #icon {
+  margin-top: 4rem;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: var(--text2);
+}
+
+.team .row .card .info .icons #icon:hover {
+  color: var(--sec);
+}
+
+.team .row .card::before,
+.team .row .card::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  z-index: -1;
+}
+
+.team .row .card::before {
+  background: var(--sec);
+  top: -3rem;
+  right: -4rem;
+}
+
+.team .row .card::after {
+  background: var(--pri);
+  bottom: -3rem;
+  left: -4rem;
+}
+
+.contact {
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.contact .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row-reverse;
+}
+
+.contact .row .image img {
+  height: 70vh;
+  width: 45vw;
+}
+
+.contact .row .form-con {
+  width: 50%;
+  text-align: left;
+  padding: 0 5rem;
+  padding-top: 1rem;
+}
+
+.contact .row .form-con input,
+textarea {
+  border: none;
+  outline: none;
+  height: 4rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  background: none;
+  font-size: 1.6rem;
+}
+
+.contact .row .form-con .inputbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .row .form-con .inputbox input[type="text"] {
+  width: 49%;
+}
+
+.contact .row .form-con input[type="email"] {
+  width: 100%;
+}
+
+.contact .row .form-con textarea {
+  width: 100%;
+  height: 20rem;
+  padding: 1rem;
+  resize: none;
+}
+
+.contact .row .form-con input[type="submit"] {
+  background-color: var(--sec);
+  height: 4rem;
+  width: 100%;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.contact .row .form-con input[type="submit"]:hover {
+  background-color: var(--pri);
+}
+
+.faq {
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.faq .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  flex-flow: row-reverse;
+}
+
+.faq .row .image img {
+  height: 70vh;
+  width: 45vw;
+}
+
+.faq .row .accordion-con {
+  width: 50%;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.faq .row .accordion-con .accordion .accordion-header {
+  background-color: var(--sec);
+  margin: 1rem 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.faq .row .accordion-con .accordion .accordion-header span {
+  display: inline-block;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  background-color: var(--text);
+  color: var(--text2);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.faq .row .accordion-con .accordion .accordion-header h3 {
+  display: inline;
+  color: var(--text);
+  font-weight: bold;
+  padding-left: 0.5em;
+  font-size: 1.3rem;
+}
+
+.faq .row .accordion-con .accordion .accordion-body {
+  padding: 1rem;
+  color: var(--text2);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  font-size: 1.2rem;
+  display: none;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  margin-top: 1rem;
+  background-color: var(--text2);
+}
+
+.footer h1 {
+  color: var(--text);
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.footer span {
+  color: var(--sec);
+}
+
+.footer .icons a {
+  padding: 0 7px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.footer .icons a:hover {
+  transition: 0.4s ease;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 992px) {
+  .section {
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .menu {
+    display: none;
+  }
+
+  label {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+  }
+
+  label .close-btn {
+    display: none;
+    transition: 0.5s ease;
+  }
+
+  .heading {
+    z-index: -1;
+  }
+
+  .team .heading {
+    z-index: 1;
+  }
+
+  #check:checked ~ .navbar .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--text2);
+    text-align: center;
+  }
+
+  .nav-tog {
+    display: none;
+  }
+
+  .navbar .menu ul li {
+    padding: 1rem 0;
+    display: block;
+    background-color: var(--sec);
+    margin: 2rem auto;
+    width: 70%;
+  }
+
+  .navbar .menu ul li:hover {
+    background-color: var(--pri);
+    transition: 0.2s ease;
+  }
+
+  .navbar .menu ul li a:hover {
+    color: var(--text);
+    padding: 0;
+    background: transparent;
+  }
+
+  #check:checked ~ .navbar label .menu-btn {
+    display: none;
+  }
+
+  #check:checked ~ .navbar label .close-btn {
+    display: block;
+    z-index: 2;
+    position: fixed;
+  }
+
+  label .menu-btn {
+    position: absolute;
+  }
+
+  .navbar .logo {
+    bottom: -14px;
+  }
+
+  .home {
+    display: grid;
+    place-items: center;
+  }
+
+  .content {
+    margin: 50px auto;
+    text-align: center;
+  }
+  .image img {
+    width: 80vw;
+    height: 50vh;
+    margin: 50px auto;
+  }
+
+  .content .article h1 {
+    font-size: 35px;
+  }
+
+  .content .article a {
+    font-size: 18px;
+    padding: 8px 30px;
+  }
+
+  .content .social i {
+    font-size: 22px;
+  }
+
+  .content .social {
+    margin-left: 10px;
+  }
+
+  .about .row {
+    flex-flow: column-reverse;
+    padding: 0 2rem;
+  }
+
+  .about .row .image img {
+    width: 90vw;
+  }
+
+  .about .row .content {
+    text-align: center;
+  }
+  .service .row {
+    flex-flow: column;
+  }
+  .service .row.two {
+    flex-flow: column;
+  }
+  .service .row .image img {
+    width: 90vw;
+  }
+  .service .row .content {
+    padding: 0;
+    text-align: center;
+  }
+  .service .row.two .content {
+    text-align: center;
+    padding: 0;
+  }
+
+  .contact .row {
+    flex-flow: column-reverse;
+  }
+
+  .contact .row .image img {
+    width: 90vw;
+  }
+
+  .contact .row .form-con {
+    width: 90%;
+    padding: 0 1.5rem;
+  }
+
+  .faq {
+    padding: 2rem 0;
+  }
+
+  .faq .row {
+    flex-flow: column-reverse;
+  }
+
+  .faq .row .image img {
+    width: 90vw;
+  }
+
+  .faq .row .accordion-con {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .logo {
+    font-size: 22px;
+  }
+
+  .content .article {
+    font-size: 30px;
+  }
+
+  .content article a {
+    font-size: 17px;
+    padding: 8px 25px;
+  }
+}
